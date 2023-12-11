@@ -38309,7 +38309,7 @@ paths:
           type: string
       tags:
         - Query
-  /neutron/dex/filled_limit_order_tranche:
+  /neutron/dex/inactive_limit_order_tranche:
     get:
       summary: Queries a list of InactiveLimitOrderTranche items.
       operationId: NeutronDexInactiveLimitOrderTrancheAll
@@ -38470,7 +38470,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /neutron/dex/filled_limit_order_tranche/{pair_id}/{token_in}/{tick_index}/{tranche_key}:
+  /neutron/dex/inactive_limit_order_tranche/{pair_id}/{token_in}/{tick_index}/{tranche_key}:
     get:
       summary: Queries a InactiveLimitOrderTranche by index.
       operationId: NeutronDexInactiveLimitOrderTranche
