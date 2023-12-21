@@ -39428,7 +39428,7 @@ paths:
           schema:
             type: object
             properties:
-              Pool_metadata:
+              pool_metadata:
                 type: object
                 properties:
                   id:
@@ -71793,7 +71793,7 @@ definitions:
   neutron.dex.QueryGetPoolMetadataResponse:
     type: object
     properties:
-      Pool_metadata:
+      pool_metadata:
         type: object
         properties:
           id:
