@@ -39,10 +39,9 @@ service Query {
   }
 
   // Queries a list of LimitOrderTrancheUser items for a given address.
-	rpc LimitOrderTrancheUserAllByAddress(QueryAllLimitOrderTrancheUserByAddressRequest) returns (QueryAllLimitOrderTrancheUserByAddressResponse) {
-		option (google.api.http).get = "/neutron/dex/user/limit_orders/{address}";
-	}
-
+  rpc LimitOrderTrancheUserAllByAddress(QueryAllLimitOrderTrancheUserByAddressRequest) returns (QueryAllLimitOrderTrancheUserByAddressResponse) {
+    option (google.api.http).get = "/neutron/dex/user/limit_orders/{address}";
+  }
 
   // Queries a LimitOrderTranche by index.
   rpc LimitOrderTranche(QueryGetLimitOrderTrancheRequest) returns (QueryGetLimitOrderTrancheResponse) {
