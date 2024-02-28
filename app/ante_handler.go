@@ -82,13 +82,7 @@ func NewAnteHandler(options HandlerOptions, logger log.Logger) (sdk.AnteHandler,
 		ibcante.NewRedundantRelayDecorator(options.IBCKeeper),
 	}
 
-	// Don't delete it even if IDE tells you so.
-	// This constant depends on build tag.
-	if !SkipCcvMsgFilter {
-		anteDecorators = append(anteDecorators, consumerante.NewMsgFilterDecorator(options.ConsumerKeeper))
-	} else {
-		logger.Error("WARNING: BUILT WITH skip_ccv_msg_filter. THIS IS NOT A PRODUCTION BUILD")
-	}
+	logger.Error("WARNING: BUILT WITH skip_ccv_msg_filter. THIS IS NOT A PRODUCTION BUILD")
 
 	return sdk.ChainAnteDecorators(anteDecorators...), nil
 }
